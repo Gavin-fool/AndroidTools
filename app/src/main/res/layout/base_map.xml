@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/body"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/map_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_base_map"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setmapview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/map_rg"
+        android:layout_below="@+id/map_title" >
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/star_cross" />
+
+    <ZoomControls
+        android:id="@+id/mapZoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/map_rg"
+        android:layout_alignParentRight="true" />
+
+    <RadioGroup
+        android:id="@+id/map_rg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="3dip"
+        android:paddingTop="3dip" >
+
+        <RadioButton
+            android:id="@+id/rdo_entire"
+            style="@style/main_rb"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/rb_meun"
+            android:drawableTop="@drawable/navigation_entire"
+            android:text="全屏" />
+
+        <RadioButton
+            android:id="@+id/rdo_exit_map"
+            style="@style/main_rb"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/rb_meun"
+            android:drawableTop="@drawable/exit_sys_pressed"
+            android:text="退出" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/map_prg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/txt_msg_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="初次加载较慢 ,请耐心等候..."
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

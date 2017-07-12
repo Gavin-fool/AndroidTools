@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="ntp_servers">
+
+        <!-- 互联网ntp服务器 -->
+        <item>ntp.sjtu.edu.cn</item>
+        <item>s2g.time.edu.cn</item>
+        <item>time.windows.com</item>
+    </string-array>
+    <!-- activiteMQ TOPICS -->
+    <string-array name="name_topics">
+        <item>SUPERMAP.TOPIC.MOBILE</item>
+    </string-array>
+
+    <string name="mq_topics">SUPERMAP.TOPIC.MOBILE</string>
+    <string name="mq_type_task">TOPIC_TASK</string>
+    <string name="mq_type_update">TOPIC_UPDATE</string>
+    <string name="mq_type_current_coord">TOPIC_CURRENT_COORD</string>
+    <string name="mq_server_port">1883</string>
+
+    <!-- 更新文件列表   解释最后一个字段：只是初始化时用到，-1:不需要初始化,0:简单初始化,只需要根据文件名进行判断,1:加强版初始化,不仅需要文件名，文件名不存在时还需要根据后最，2:需要进行解压 -->
+    <string-array name="updatefilelist">
+        <item>config,8.1.1,/config.xml,0,配置文件,0</item>
+        <item>license,8.1.1,/supermap/lic/license.slm,0,许可文件,1</item>
+        <item>component,8.1.1,/component.xml,0,事件文件,0</item>
+        <item>griddata,8.1.1,/mapData/,2,网格数据,2</item>
+        <item>db,8.1.1,/SMdataBase.db,0,数据库,0</item>
+        <item>apk,8.1.20160328001,/APK/,1,软件APK,-1</item>
+        <item>renfang,8.1.1,/renfang.xml,0,人房表单,0</item>
+        <item>dictionary,8.1.1,/dictionary.xml,0,人房字典,0</item>
+        <item>help,8.1.1,/help.xml,0,帮助文档,0</item>
+    </string-array>
+    <!-- 可以在本地读到版本号的文件类型，0，类似component.xml,1:类似config.xml,2:类似数据库，3：类似apk -->
+    <string-array name="updatelocalfiletype">
+        <item>config,1</item>
+        <item>help,1</item>
+        <item>component,0</item>
+        <item>renfang,0</item>
+        <item>dictionary,0</item>
+        <item>db,2</item>
+        <item>apk,3</item>
+    </string-array>
+    <string-array name="custom_res">
+
+        <!-- 欢迎界面背景 -->
+        <item>/custom_res/background.png</item>
+        <!-- 登录界面界面表头 -->
+        <item>/custom_res/loginTitle.png</item>
+    </string-array>
+
+    <string name="peohou_svrurl_housedetail">/default/bui/buihouse/com.supermap.scgm.bui.buildingmanage.gethouseEntity.biz.ext</string>
+    <string name="prohou_svrurl_updatahouse">/default/bui/buihouse/com.supermap.scgm.bui.buildingmanage.updataEntity.biz.ext</string>
+
+</resources>

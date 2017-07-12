@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"   
+	android:layout_height="wrap_content"   
+	android:paddingTop="4dip" 
+	android:layout_width="fill_parent">  
+	<RelativeLayout android:orientation="vertical" 
+		android:layout_width="wrap_content" 
+		android:id="@+id/menu_container"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true">
+	<ImageView android:layout_height="wrap_content"   
+		android:id="@+id/ItemImage"  
+		android:paddingTop="5dip"
+		android:layout_centerInParent="true" 
+		android:layout_width="wrap_content" />
+	<Button android:layout_height="25dip"   
+        android:id="@+id/ItemNew"   
+        android:layout_width="25dip" 
+        android:paddingTop="-10dip" 
+        android:layout_marginLeft="-20dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="0dip"
+        android:textSize="12dip"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+		android:gravity="center" />   
+	</RelativeLayout>
+	<TextView android:layout_width="wrap_content"   
+        android:layout_below="@+id/menu_container"   
+        android:layout_height="wrap_content"   
+        android:text="TextView01"   
+        android:layout_centerHorizontal="true"   
+        android:id="@+id/ItemText"
+        android:textColor="#133864"
+        android:textSize="16sp" />  
+  </RelativeLayout>  

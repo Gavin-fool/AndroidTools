@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.supermap.mapping.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.supermap.mapping.MapView>
+
+    <ZoomControls
+        android:id="@+id/zoomControl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:alpha="0.5"
+        android:background="@drawable/toolbar_selector"
+        android:paddingBottom="6dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:paddingTop="6dp" >
+
+        <TextView
+            android:id="@+id/scale_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="18dp"
+            android:text="比例尺" />
+
+        <TextView
+            android:id="@+id/realwidth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dip"
+            android:text="宽度" />
+
+        <Button
+            android:id="@+id/btn_query"
+            android:layout_width="wrap_content"
+            android:layout_height="80dip"
+            android:layout_alignParentRight="true"
+            android:text="查询"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dip"
+            android:layout_toLeftOf="@id/btn_query"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_x"
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:gravity="center"
+                android:text="X坐标值："
+                android:textColor="#FF000000" />
+
+            <EditText
+                android:id="@+id/et_x"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_toRightOf="@id/tv_x"
+                android:focusable="false"
+                android:text="505776" />
+
+            <TextView
+                android:id="@+id/tv_y"
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:layout_below="@id/tv_x"
+                android:gravity="center"
+                android:text="Y坐标值："
+                android:textColor="#FF000000" />
+
+            <EditText
+                android:id="@+id/et_y"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_below="@id/et_x"
+                android:layout_toRightOf="@id/tv_y"
+                android:focusable="false"
+                android:text="302186" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/partNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/scale_txt"
+            android:layout_alignParentRight="true"
+            android:text="部件数量" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

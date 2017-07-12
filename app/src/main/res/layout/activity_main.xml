@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 主菜单，九宫格 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/custom_toolbar" />
+
+    <RadioGroup
+        android:id="@+id/main_rg"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="3dip"
+        android:paddingTop="3dip">
+
+        <RadioButton
+            android:id="@+id/change_user"
+            style="@style/main_rb"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/rb_meun"
+            android:drawableTop="@drawable/userchange_pressed"
+            android:text="切换用户" />
+
+        <RadioButton
+            android:id="@+id/exit_app"
+            style="@style/main_rb"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/rb_meun"
+            android:drawableTop="@drawable/exit_sys_pressed"
+            android:text="退出" />
+    </RadioGroup>
+
+    <GridView
+        android:id="@+id/gvMainMenu"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/main_rg"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:persistentDrawingCache="animation|scrolling"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" />
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">测试工具</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_app_init">AppInit</string>
+    <string name="title_activity_base_fragment">BaseFragment</string>
+    <string name="title_activity_main">测试工具</string>
+    <string name="title_base_map">地图测试</string>
+    <string name="title_activity_robotium_test">RobotiumTestActivity</string>
+    <string name="title_activity_first">FirstActivity</string>
+
+</resources>
