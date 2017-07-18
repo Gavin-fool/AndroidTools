@@ -3,7 +3,7 @@ package com.alier.com.androidtools.ui.threadTest;
 import android.view.Window;
 
 import com.alier.com.androidtools.R;
-import com.alier.com.androidtools.commons.BaseActivity;
+import com.alier.com.commons.BaseActivity;
 
 public class ThreadTestActivity extends BaseActivity {
 

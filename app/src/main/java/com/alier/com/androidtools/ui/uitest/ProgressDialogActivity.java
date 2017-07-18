@@ -7,12 +7,11 @@ import android.os.Message;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Toast;
 
 import com.alier.com.androidtools.R;
-import com.alier.com.androidtools.commons.BaseActivity;
+import com.alier.com.commons.BaseActivity;
 
 /**
  * @author 作者 : gavin_fool

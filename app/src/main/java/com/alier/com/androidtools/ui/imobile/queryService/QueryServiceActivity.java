@@ -12,9 +12,9 @@ import android.widget.Toast;
 import android.widget.ZoomControls;
 
 import com.alier.com.androidtools.R;
-import com.alier.com.androidtools.commons.BaseActivity;
-import com.alier.com.androidtools.commons.Config;
-import com.alier.com.androidtools.commons.utils.T;
+import com.alier.com.commons.BaseActivity;
+import com.alier.com.commons.Config;
+import com.alier.com.commons.utils.T;
 import com.supermap.data.Dataset;
 import com.supermap.data.Datasource;
 import com.supermap.data.DatasourceConnectionInfo;
@@ -25,7 +25,6 @@ import com.supermap.data.FieldInfos;
 import com.supermap.data.Geometry;
 import com.supermap.data.Point;
 import com.supermap.data.Point2D;
-import com.supermap.data.Recordset;
 import com.supermap.data.Rectangle2D;
 import com.supermap.data.Workspace;
 import com.supermap.data.WorkspaceConnectionInfo;
@@ -33,7 +32,6 @@ import com.supermap.data.WorkspaceType;
 import com.supermap.data.WorkspaceVersion;
 import com.supermap.mapping.CallOut;
 import com.supermap.mapping.MapControl;
-import com.supermap.mapping.MapInertiaListener;
 import com.supermap.mapping.MapParameterChangedListener;
 import com.supermap.mapping.MapView;
 import com.supermap.mapping.RefreshListener;
@@ -48,7 +46,6 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**

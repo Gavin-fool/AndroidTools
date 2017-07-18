@@ -4,14 +4,13 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 
 import com.alier.com.androidtools.R;
-import com.alier.com.androidtools.commons.Config;
+import com.alier.com.commons.Config;
 import com.supermap.data.Environment;
 import com.supermap.data.GeoPoint;
 import com.supermap.data.GeoStyle;

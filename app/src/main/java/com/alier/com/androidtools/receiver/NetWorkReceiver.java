@@ -6,7 +6,8 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import com.alier.com.androidtools.commons.BaseApp;
+import com.alier.com.commons.BaseApp;
+
 
 /**
  * 

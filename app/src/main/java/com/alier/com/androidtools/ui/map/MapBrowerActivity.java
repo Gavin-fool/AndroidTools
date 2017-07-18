@@ -7,7 +7,7 @@ import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 
 import com.alier.com.androidtools.R;
-import com.alier.com.androidtools.commons.BaseActivity;
+import com.alier.com.commons.BaseActivity;
 
 public class MapBrowerActivity extends BaseActivity implements OnClickListener {
 	/**

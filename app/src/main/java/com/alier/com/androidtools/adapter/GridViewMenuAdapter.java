@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alier.com.androidtools.R;
-import com.alier.com.androidtools.entity.Menu;
+import com.alier.com.commons.entity.Menu;
 
 /**
  * @Title:GridViewMenuAdapter

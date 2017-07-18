@@ -12,9 +12,9 @@ import android.widget.Toast;
 import android.widget.ZoomControls;
 
 import com.alier.com.androidtools.R;
-import com.alier.com.androidtools.commons.BaseActivity;
-import com.alier.com.androidtools.commons.Config;
-import com.alier.com.androidtools.commons.utils.T;
+import com.alier.com.commons.BaseActivity;
+import com.alier.com.commons.Config;
+import com.alier.com.commons.utils.T;
 import com.supermap.analyst.BufferAnalystGeometry;
 import com.supermap.analyst.BufferAnalystParameter;
 import com.supermap.analyst.BufferEndType;

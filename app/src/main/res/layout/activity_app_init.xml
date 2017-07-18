@@ -3,8 +3,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/app_init"
-    tools:context="com.gavin.androidtesttools.ui.AppInit" >
+    tools:context="com.alier.com.androidtools.ui.AppInit" >
 
+    <com.alier.com.controllerlibrary.lockview.LockView
+        android:id="@+id/lockView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lockview_background"/>
+    <Button
+        android:id="@+id/btn_set_password"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="50dip"
+        android:layout_marginBottom="110dip"
+        android:background="@null"
+        android:text="设置密码"/>
+    <Button
+        android:id="@+id/btn_forget_password"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="220dip"
+        android:layout_marginBottom="110dip"
+        android:background="@null"
+        android:text="忘记密码"/>
     <Button
         android:id="@+id/begin_app"
         android:layout_height="wrap_content"

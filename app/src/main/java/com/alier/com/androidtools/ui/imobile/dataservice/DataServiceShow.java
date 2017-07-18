@@ -1,16 +1,14 @@
 package com.alier.com.androidtools.ui.imobile.dataservice;
 
 import com.alier.com.androidtools.R;
-import com.alier.com.androidtools.commons.BaseActivity;
-import com.alier.com.androidtools.commons.Config;
-import com.alier.com.androidtools.commons.utils.T;
+import com.alier.com.commons.BaseActivity;
+import com.alier.com.commons.Config;
+import com.alier.com.commons.utils.T;
 import com.supermap.data.Datasource;
 import com.supermap.data.DatasourceConnectionInfo;
 import com.supermap.data.EngineType;
 import com.supermap.data.Environment;
-import com.supermap.data.QueryParameter;
 import com.supermap.data.Workspace;
-import com.supermap.data.WorkspaceConnectionInfo;
 import com.supermap.mapping.MapControl;
 import com.supermap.mapping.MapView;
 import com.supermap.services.FeatureSet;

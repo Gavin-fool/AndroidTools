@@ -1,9 +1,9 @@
 package com.alier.com.androidtools.ui.imobile.navigation;
 
 import com.alier.com.androidtools.R;
-import com.alier.com.androidtools.commons.BaseActivity;
-import com.alier.com.androidtools.commons.Config;
-import com.alier.com.androidtools.commons.utils.T;
+import com.alier.com.commons.BaseActivity;
+import com.alier.com.commons.Config;
+import com.alier.com.commons.utils.T;
 import com.supermap.data.CoordSysTransMethod;
 import com.supermap.data.CoordSysTransParameter;
 import com.supermap.data.CoordSysTranslator;

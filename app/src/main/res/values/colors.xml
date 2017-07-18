@@ -5,5 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="light_blue">#5CACEE</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
     <color name="window_background">#FFFDFDFE</color>
+    <color name="lockview_background">#2B2B2B</color>
+    <color name="Transparent">#00000000</color>
 </resources>

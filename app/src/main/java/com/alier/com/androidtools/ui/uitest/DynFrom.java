@@ -1,11 +1,10 @@
 package com.alier.com.androidtools.ui.uitest;
 
-
 import android.os.Handler;
 import android.os.Message;
 import android.view.Window;
 
-import com.alier.com.androidtools.commons.BaseActivity;
+import com.alier.com.commons.BaseActivity;
 
 public class DynFrom extends BaseActivity {
 	Handler sonHandler;

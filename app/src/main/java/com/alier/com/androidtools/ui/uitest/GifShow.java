@@ -2,7 +2,7 @@ package com.alier.com.androidtools.ui.uitest;
 
 
 import com.alier.com.androidtools.R;
-import com.alier.com.androidtools.commons.BaseActivity;
+import com.alier.com.commons.BaseActivity;
 
 /**
  * @author  作者 : gavin_fool

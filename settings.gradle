@@ -1,1 +1,1 @@
-include ':app', ':imobilelibs'
+include ':app', ':imobilelibs', ':controllerlibs', ':commons'

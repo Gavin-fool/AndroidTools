@@ -3,7 +3,8 @@ package com.alier.com.androidtools.ui.map;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 
-import com.alier.com.androidtools.commons.BaseActivity;
+import com.alier.com.commons.BaseActivity;
+
 
 public class AddCallout extends BaseActivity {
 	private LayoutInflater inflater;

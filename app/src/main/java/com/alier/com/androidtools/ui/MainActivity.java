@@ -14,10 +14,10 @@ import android.widget.RadioButton;
 
 import com.alier.com.androidtools.R;
 import com.alier.com.androidtools.adapter.GridViewMenuAdapter;
-import com.alier.com.androidtools.commons.BaseActivity;
-import com.alier.com.androidtools.commons.BaseApp;
-import com.alier.com.androidtools.commons.Global;
 import com.alier.com.androidtools.receiver.NetWorkReceiver;
+import com.alier.com.commons.BaseActivity;
+import com.alier.com.commons.BaseApp;
+import com.alier.com.commons.Global;
 
 public class MainActivity extends BaseActivity implements OnClickListener {
 
@@ -52,8 +52,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 
 	@Override
 	public void exec() {
-		gvMenuAdapter = new GridViewMenuAdapter(MainActivity.this,
-				BaseApp.modulesItems);
+		gvMenuAdapter = new GridViewMenuAdapter(MainActivity.this,BaseApp.modulesItems);
 		gvMainMenu.setAdapter(gvMenuAdapter);
 		gvMainMenu.setOnItemClickListener(new OnItemClickListener() {
 
