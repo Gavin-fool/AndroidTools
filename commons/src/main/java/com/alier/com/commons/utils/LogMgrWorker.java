@@ -43,7 +43,6 @@ public class LogMgrWorker {
 						if (foutStream != null)
 							foutStream.close();
 					} catch (IOException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} finally {
 						osw = null;
@@ -58,7 +57,6 @@ public class LogMgrWorker {
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				} else { // 有任务
@@ -74,9 +72,7 @@ public class LogMgrWorker {
 						}
 					}
 				}
-
 			}
-
 			try {
 				if (osw != null)
 					osw.close();
@@ -91,7 +87,7 @@ public class LogMgrWorker {
 			WORKER_STATUS = false;
 		}
 
-	};
+	}
 
 	private WorkThread workThread = new WorkThread();
 	private Thread workth = null;
@@ -134,69 +130,67 @@ public class LogMgrWorker {
 			osw.write("@(" + dt.toString() + ")");
 			osw.write("\r\n");//
 			osw.flush();
-
 		} catch (Exception ex) {
 			return false;
 		}
-
 		return true;
 	}
 
 	// 打开文件
 	private FileOutputStream openFileforOut(int byHour) {
-		Calendar c = Calendar.getInstance(TimeZone.getTimeZone("GMT+08:00"));
-		String month = null;
-		String day = null;
-
-		if ((c.get(Calendar.MONTH) + 1) < 10) {
-			month = "0" + (c.get(Calendar.MONTH) + 1);
-		} else {
-			month = "" + (c.get(Calendar.MONTH) + 1);
-		}
-		if (c.get(Calendar.DAY_OF_MONTH) < 10) {
-			day = "0" + c.get(Calendar.DAY_OF_MONTH);
-		} else {
-			day = c.get(Calendar.DAY_OF_MONTH) + "";
-		}
-
-		String date2 = c.get(Calendar.YEAR) + month + day + "";
-		String headOfHour = "";
-		if (c.get(Calendar.HOUR_OF_DAY) < 10) {
-			headOfHour = "0";
-		}
-		String logPath = Config.ANDROID_TEST_PATH + File.separator
-				+ "log" + File.separator + date2 + "/";
-		File dir = new File(logPath);
-		// 如果目录中不存在，创建这个目录
-		if (!dir.exists())
-			dir.mkdirs();
-		// 按两小时一次生成日志文件
-		int tempHour = c.get(Calendar.HOUR_OF_DAY)
-				- (c.get(Calendar.HOUR_OF_DAY) % byHour);
-		String temp = "" + (tempHour + byHour);
-		if (Integer.valueOf(temp) < 10) {
-			temp = "0" + temp;
-		}
-		String fileName = logPath + File.separator
-				+ (headOfHour + tempHour + "-" + temp + ".txt");
-
-		timeBlock = Integer.valueOf(temp);
-		curDay = Integer.valueOf(day);
-
-		FileOutputStream fout = null;
-		File file = new File(fileName);
 		try {
-			if (!file.exists()) {
-				try {
-					file.createNewFile();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+			Calendar c = Calendar.getInstance(TimeZone.getTimeZone("GMT+08:00"));
+			String month = null;
+			String day = null;
+			if ((c.get(Calendar.MONTH) + 1) < 10) {
+				month = "0" + (c.get(Calendar.MONTH) + 1);
+			} else {
+				month = "" + (c.get(Calendar.MONTH) + 1);
 			}
-			fout = new FileOutputStream(file, true); // true表示追加到已存在的文件
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			if (c.get(Calendar.DAY_OF_MONTH) < 10) {
+				day = "0" + c.get(Calendar.DAY_OF_MONTH);
+			} else {
+				day = c.get(Calendar.DAY_OF_MONTH) + "";
+			}
+			String date2 = c.get(Calendar.YEAR) + month + day + "";
+			String headOfHour = "";
+			if (c.get(Calendar.HOUR_OF_DAY) < 10) {
+				headOfHour = "0";
+			}
+			String logPath = Config.ANDROID_TEST_PATH + File.separator
+					+ "log" + File.separator + date2 + "/";
+			File dir = new File(logPath);
+			// 如果目录中不存在，创建这个目录
+			if (!dir.exists())
+				dir.mkdirs();
+			// 按两小时一次生成日志文件
+			int tempHour = c.get(Calendar.HOUR_OF_DAY)
+					- (c.get(Calendar.HOUR_OF_DAY) % byHour);
+			String temp = "" + (tempHour + byHour);
+			if (Integer.valueOf(temp) < 10) {
+				temp = "0" + temp;
+			}
+			String fileName = logPath + File.separator
+					+ (headOfHour + tempHour + "-" + temp + ".txt");
+			timeBlock = Integer.valueOf(temp);
+			curDay = Integer.valueOf(day);
+			FileOutputStream fout = null;
+			File file = new File(fileName);
+			try {
+				if (!file.exists()) {
+					try {
+						file.createNewFile();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+				fout = new FileOutputStream(file, true); // true表示追加到已存在的文件
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+			return fout;
+		}catch  (Exception ex) {
+			return null;
 		}
-		return fout;
 	}
 }

@@ -1,11 +1,8 @@
 package com.alier.com.commons;
 
 import android.app.Activity;
-import android.app.Application;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.res.Configuration;
-
 
 import com.alier.com.commons.entity.Menu;
 
@@ -14,7 +11,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
-public class BaseApp extends Application {
+public class BaseApp {
     /**
      * 当前安装的apk的版本号
      */
@@ -23,31 +20,6 @@ public class BaseApp extends Application {
      * 日志生成时间间隔
      */
     public static int writeLogTime = 2;
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-    }
-
-    @Override
-    public void onLowMemory() {
-        super.onLowMemory();
-    }
-
-    @Override
-    public void onTerminate() {
-        super.onTerminate();
-    }
-
-    @Override
-    public void onTrimMemory(int level) {
-        super.onTrimMemory(level);
-    }
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-    }
 
     public static Context mContext;
     /**

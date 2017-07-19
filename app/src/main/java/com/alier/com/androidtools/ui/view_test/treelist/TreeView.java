@@ -33,7 +33,6 @@ public class TreeView extends BaseActivity {
                 }
 
             });
-
             mTree.setAdapter(mAdapter);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
