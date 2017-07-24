@@ -28,5 +28,11 @@
         android:text="@string/app_name"
         android:textSize="18dip"
         android:textColor="@color/black"/>
-
+    <CheckBox
+        android:id="@+id/cbTreenode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dip"
+        android:focusable="false"/>
 </RelativeLayout>

@@ -10,10 +10,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.alier.com.androidtools.ui.view_test.treelist.TreeView">
 
+    <Button
+        android:id="@+id/btnShowCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="显示CheckBox"/>
+
     <ListView
         android:id="@+id/id_tree"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:divider="#aaa"
+        android:layout_below="@id/btnShowCheckBox"
         android:dividerHeight="1px"></ListView>
 </RelativeLayout>

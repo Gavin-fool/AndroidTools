@@ -1,5 +1,8 @@
 package com.alier.com.controllerlibrary.tree.bean;
 
+import android.util.Log;
+
+import com.alier.com.commons.utils.T;
 import com.alier.com.controllerlibrary.R;
 
 import java.lang.reflect.Field;
@@ -69,13 +72,10 @@ public class TreeHelper {
      * @throws IllegalAccessException
      * @throws IllegalArgumentException
      */
-    public static <T> List<Node> convetData2Node(List<T> datas)
-            throws IllegalArgumentException, IllegalAccessException
-
-    {
+    public static <T> List<Node> convetData2Node(List<T> datas, boolean isHide)
+            throws IllegalArgumentException, IllegalAccessException {
         List<Node> nodes = new ArrayList<Node>();
         Node node = null;
-
         for (T t : datas) {
             int id = -1;
             int pId = -1;
@@ -111,7 +111,7 @@ public class TreeHelper {
                 if (f.getAnnotation(TreeNodeCusIcon.class) != null) {
                     f.setAccessible(true);
                     cusIcon = f.getInt(t);
-                    if(cusIcon != -1){
+                    if (cusIcon != -1) {
                         node.setCustomIcon(cusIcon);
                     }
                 }
@@ -126,6 +126,7 @@ public class TreeHelper {
                     node.setTextSize(textSize);
                 }
             }
+            node.setHideChecked(isHide);
             nodes.add(node);
         }
 
@@ -145,7 +146,6 @@ public class TreeHelper {
                 }
             }
         }
-
         // 设置图片
         for (Node n : nodes) {
             setNodeIcon(n);
@@ -163,12 +163,9 @@ public class TreeHelper {
      * @throws IllegalAccessException
      */
     public static <T> List<Node> getSortedNodes(List<T> datas,
-                                                int defaultExpandLevel) throws IllegalArgumentException,
-            IllegalAccessException
-
-    {
+                                                int defaultExpandLevel, boolean isHide) throws IllegalArgumentException, IllegalAccessException {
         List<Node> result = new ArrayList<Node>();
-        List<Node> nodes = convetData2Node(datas);
+        List<Node> nodes = convetData2Node(datas, isHide);
         List<Node> rootNodes = getRootNodes(nodes);
         for (Node node : rootNodes) {
             addNode(result, node, defaultExpandLevel, 1);
@@ -188,5 +185,60 @@ public class TreeHelper {
             node.setIcon(R.drawable.tree_ec);
         } else
             node.setIcon(-1);
+    }
+
+    public static void setNodeChecked(Node node, boolean isChecked) {
+        // 自己设置是否选择
+        node.setChecked(isChecked);
+        /**
+         * 非叶子节点,子节点处理
+         */
+        setChildrenNodeChecked(node, isChecked);
+        /** 父节点处理 */
+        setParentNodeChecked(node);
+    }
+
+    /**
+     * 非叶子节点,子节点处理
+     */
+    private static void setChildrenNodeChecked(Node node, boolean isChecked) {
+        node.setChecked(isChecked);
+        if (!node.isLeaf()) {
+            for (Node n : node.getChildren()) {
+                // 所有子节点设置是否选择
+                setChildrenNodeChecked(n, isChecked);
+            }
+        }
+    }
+
+    /**
+     * 设置父节点选择
+     *
+     * @param node
+     */
+    private static void setParentNodeChecked(Node node) {
+        /** 非根节点 */
+        if (!node.isRoot()) {
+            Node rootNode = node.getParent();
+            boolean isAllChecked = true;
+            for (Node n : rootNode.getChildren()) {
+                if (!n.isChecked()) {
+                    isAllChecked = false;
+                    break;
+                }
+            }
+            if (isAllChecked) {
+                rootNode.setChecked(true);
+            } else {
+                rootNode.setChecked(false);
+            }
+            if(rootNode.isRoot()){
+                boolean is = rootNode.isChecked();
+                if(is){
+                    Log.i("TAG","node:"+node.toString());
+                }
+            }
+            setParentNodeChecked(rootNode);
+        }
     }
 }

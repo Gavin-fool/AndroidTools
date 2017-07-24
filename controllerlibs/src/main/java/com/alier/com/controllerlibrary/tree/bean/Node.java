@@ -39,6 +39,14 @@ public class Node {
      */
     private boolean isExpand = false;
     /**
+     * 是否选中
+     */
+    private boolean isChecked = false;
+    /**
+     * CheckBox是否隐藏
+     */
+    private boolean isHideChecked = true;
+    /**
      * 展开折叠图标
      */
     private int icon = -1;
@@ -178,12 +186,26 @@ public class Node {
     public void setExpand(boolean isExpand) {
         this.isExpand = isExpand;
         if (!isExpand) {
-
-            Log.e("TAG", name + " , " + "shousuo ");
             for (Node node : children) {
                 node.setExpand(isExpand);
             }
         }
+    }
+
+    public boolean isChecked() {
+        return isChecked;
+    }
+
+    public void setChecked(boolean checked) {
+        isChecked = checked;
+    }
+
+    public boolean isHideChecked() {
+        return isHideChecked;
+    }
+
+    public void setHideChecked(boolean hideChecked) {
+        isHideChecked = hideChecked;
     }
 
     public List<Node> getChildren() {

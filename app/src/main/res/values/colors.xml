@@ -9,4 +9,5 @@
     <color name="window_background">#FFFDFDFE</color>
     <color name="lockview_background">#2B2B2B</color>
     <color name="Transparent">#00000000</color>
+    <color name="red">#FFFF0000</color>
 </resources>
