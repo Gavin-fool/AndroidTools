@@ -79,7 +79,6 @@ public class LogMgr {
 			Log.i("TAG","info");
 			SAXReader saxReader = new SAXReader();
             doc = saxReader.read(in);
-//            Element root = (Element) doc.selectSingleNode("//Request");
 			Element root = doc.getRootElement();
             Attribute attribute = null;
             attribute = root.attribute("logType");
@@ -99,6 +98,7 @@ public class LogMgr {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return logFormatString;
+		Log.i("TAG",logFormatString);
+		return logFormatString;
     }
 }

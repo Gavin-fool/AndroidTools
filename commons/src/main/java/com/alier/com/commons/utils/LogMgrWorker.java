@@ -1,5 +1,8 @@
 package com.alier.com.commons.utils;
 
+import android.support.annotation.Nullable;
+import android.util.Log;
+
 import com.alier.com.commons.BaseApp;
 import com.alier.com.commons.Config;
 
@@ -102,6 +105,7 @@ public class LogMgrWorker {
 	public synchronized void startWorking() {
 		if (!WORKER_STATUS) {
 			workth = new Thread(workThread);
+			workth.setUncaughtExceptionHandler(CrashHandler.getCrashHandler() );
 			workth.start();
 		}
 	}
@@ -114,7 +118,7 @@ public class LogMgrWorker {
 	}
 
 	/**
-	 * 具体的网文件中写日志的方法
+	 * 具体的往文件中写日志的方法
 	 * 
 	 * @param content
 	 */
@@ -137,6 +141,7 @@ public class LogMgrWorker {
 	}
 
 	// 打开文件
+	@Nullable
 	private FileOutputStream openFileforOut(int byHour) {
 		try {
 			Calendar c = Calendar.getInstance(TimeZone.getTimeZone("GMT+08:00"));
@@ -159,10 +164,15 @@ public class LogMgrWorker {
 			}
 			String logPath = Config.ANDROID_TEST_PATH + File.separator
 					+ "log" + File.separator + date2 + "/";
+            Log.i("TAG","logPath:"+logPath);
 			File dir = new File(logPath);
 			// 如果目录中不存在，创建这个目录
+            boolean ismkdir = false;
 			if (!dir.exists())
-				dir.mkdirs();
+                ismkdir = dir.mkdirs();
+            if(!ismkdir){
+                return null;
+            }
 			// 按两小时一次生成日志文件
 			int tempHour = c.get(Calendar.HOUR_OF_DAY)
 					- (c.get(Calendar.HOUR_OF_DAY) % byHour);
