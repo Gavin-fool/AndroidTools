@@ -1,1 +1,1 @@
-include ':app', ':imobilelibs', ':controllerlibs', ':commons'
+include ':app', ':imobilelibs', ':controllerlibs', ':commons', ':MPChartLib'

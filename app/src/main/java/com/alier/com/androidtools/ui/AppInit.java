@@ -220,7 +220,7 @@ public class AppInit extends BaseActivity {
     };
 
     private void toTarget() {
-        IM_BaseMap.initMapEnvironment(BaseApp.mContext);
+//        IM_BaseMap.initMapEnvironment(BaseApp.mContext);
         Intent intent = new Intent(AppInit.this, MainActivity.class);
         startActivity(intent);
         AppInit.this.finish();

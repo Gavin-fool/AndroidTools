@@ -59,7 +59,6 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <!-- 震动 -->
     <uses-permission android:name="android.permission.VIBRATE" />
-
     <!-- 网络 -->
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -180,7 +179,49 @@
             android:name=".ui.imobile.ImobileMainActivity"
             android:label="@string/title_activity_imobile_main"
             android:theme="@style/AppTheme"></activity>
-
+        <activity android:name=".ui.MPChart.notimportant.MPMainActivity" android:theme="@style/AppTheme"></activity>
+        <activity android:name=".ui.MPChart.LineChartActivity1"></activity> <!--  android:configChanges="keyboardHidden|orientation|screenSize"  -->
+        <activity android:name=".ui.MPChart.LineChartActivity2"></activity>
+        <activity android:name=".ui.MPChart.LineChartTime"></activity>
+        <activity android:name=".ui.MPChart.BarChartActivity"></activity>
+        <activity android:name=".ui.MPChart.HorizontalBarChartActivity"></activity>
+        <activity android:name=".ui.MPChart.PieChartActivity"></activity>
+        <activity android:name=".ui.MPChart.PiePolylineChartActivity"></activity>
+        <activity android:name=".ui.MPChart.MultiLineChartActivity"></activity>
+        <activity android:name=".ui.MPChart.BarChartActivityMultiDataset"></activity>
+        <activity android:name=".ui.MPChart.DrawChartActivity"></activity>
+        <activity android:name=".ui.MPChart.ScatterChartActivity"></activity>
+        <activity android:name=".ui.MPChart.BubbleChartActivity"></activity>
+        <activity android:name=".ui.MPChart.fragments.SimpleChartDemo"></activity>
+        <activity android:name=".ui.MPChart.ListViewBarChartActivity"></activity>
+        <activity android:name=".ui.MPChart.ListViewMultiChartActivity"></activity>
+        <activity android:name=".ui.MPChart.StackedBarActivity"></activity>
+        <activity android:name=".ui.MPChart.AnotherBarActivity"></activity>
+        <activity android:name=".ui.MPChart.InvertedLineChartActivity"></activity>
+        <activity android:name=".ui.MPChart.CandleStickChartActivity"></activity>
+        <activity android:name=".ui.MPChart.CubicLineChartActivity"></activity>
+        <activity android:name=".ui.MPChart.RadarChartActivitry"></activity>
+        <activity android:name=".ui.MPChart.LineChartActivityColored"></activity>
+        <activity android:name=".ui.MPChart.DynamicalAddingActivity"></activity>
+        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityLine"></activity>
+        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityBar"></activity>
+        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityHorizontalBar"></activity>
+        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityScatter"></activity>
+        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityCandle"></activity>
+        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityBubble"></activity>
+        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityPie"></activity>
+        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityRadar"></activity>
+        <activity android:name=".ui.MPChart.realm.RealmMainActivity"></activity>
+        <activity android:name=".ui.MPChart.RealtimeLineChartActivity"></activity>
+        <activity android:name=".ui.MPChart.CombinedChartActivity"></activity>
+        <activity android:name=".ui.MPChart.PerformanceLineChart"></activity>
+        <activity android:name=".ui.MPChart.BarChartActivitySinus"></activity>
+        <activity android:name=".ui.MPChart.ScrollViewActivity"></activity>
+        <activity android:name=".ui.MPChart.StackedBarActivityNegative"></activity>
+        <activity android:name=".ui.MPChart.realm.RealmWikiExample"></activity>
+        <activity android:name=".ui.MPChart.BarChartPositiveNegative"></activity>
+        <activity android:name=".ui.MPChart.FilledLineActivity"></activity>
+        <activity android:name=".ui.MPChart.HalfPieChartActivity"></activity>
     </application>
 
 </manifest>

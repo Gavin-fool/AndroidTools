@@ -7,3 +7,14 @@
 /build
 /captures
 .externalNativeBuild
+.gitignore
+.settings/
+AndroidManifest.xml
+assets/
+build.gradle
+ic_launcher-web.png
+proguard-project.txt
+project.properties
+res/
+src/
+/gradle/

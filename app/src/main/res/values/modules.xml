@@ -30,6 +30,8 @@
         <item>queryservice,0,com.alier.com.androidtools.ui.imobile.queryService.QueryServiceActivity</item>
         <item>maponline,0,com.alier.com.androidtools.ui.webView.SuperMapOnLine</item>
         <!--百度地图测试-->
+        <!--MPAndroidChart测试-->
+        <item>MPAndrroidChart,0,com.alier.com.androidtools.ui.MPChart.notimportant.MPMainActivity</item>
         <!---->
 
     </string-array>
@@ -39,9 +41,10 @@
         <item>imobileMain,Imobile Test,1,1,0,icon_map</item>
         <item>mainlayout,UI测试,2,2,0,icon_ui</item>
         <item>dbtest,数据库测试,3,3,0,icon_sqlite</item>
-        <item>robotium,自动测试,5,5,0,icon_robotium_test</item>
-        <item>gif,GIF显示,8,8,0,icon_gif</item>
-        <item>treeview,TreeView,9,9,0,family_tree</item>
+        <item>robotium,自动测试,4,4,0,icon_robotium_test</item>
+        <item>gif,GIF显示,5,5,0,icon_gif</item>
+        <item>treeview,TreeView,6,6,0,family_tree</item>
+        <item>MPAndrroidChart,MPChart,7,7,0,ic_launcher</item>
     </string-array>
     <!--imobile模块所有子模块-->
     <string-array name="ImobileModeles">
