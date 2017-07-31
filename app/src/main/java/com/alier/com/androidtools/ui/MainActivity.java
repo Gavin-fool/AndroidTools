@@ -1,6 +1,5 @@
 package com.alier.com.androidtools.ui;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
@@ -35,7 +34,6 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		iFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
 		NetWorkReceiver netWorkReceiver = new NetWorkReceiver();
 		registerReceiver(netWorkReceiver, iFilter);
-		BaseApp.getBaseInstance().addActivity(MainActivity.this);
 		BaseApp.getBaseInstance().addReceiver(this, netWorkReceiver);
 		initView();
 	}

@@ -1,8 +1,12 @@
 package  com.alier.com.androidtools.adapter;
 
+import android.content.Context;
+import android.graphics.Color;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 /**
  * @author 作者 : gavin_fool
@@ -11,28 +15,37 @@ import android.widget.BaseAdapter;
  */
 public class SlidingMenuAdapter extends BaseAdapter {
 
-	public SlidingMenuAdapter() {
-		
+    private Context mContext;
+    private String[] slidingMenu;
+	public SlidingMenuAdapter(Context context,String[] slidingMenu) {
+		this.mContext = context;
+        this.slidingMenu = slidingMenu;
 	}
 	
 	@Override
 	public int getCount() {
-		return 0;
+		return slidingMenu.length;
 	}
 
 	@Override
 	public Object getItem(int position) {
-		return null;
+		return slidingMenu[position];
 	}
 
 	@Override
 	public long getItemId(int position) {
-		return 0;
+		return position;
 	}
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		return null;
+        if(null == convertView){
+            convertView = LayoutInflater.from(mContext).inflate(android.R.layout.simple_list_item_1,null);
+        }
+        TextView tv = (TextView)convertView.findViewById(android.R.id.text1);
+        String[] item = slidingMenu[position].split(",");
+        tv.setText(item[0]);
+		tv.setTextSize(16f);
+		return convertView;
 	}
-
 }

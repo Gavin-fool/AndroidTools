@@ -10,5 +10,6 @@
     <string name="title_base_map">地图测试</string>
     <string name="title_activity_robotium_test">RobotiumTestActivity</string>
     <string name="title_activity_first">FirstActivity</string>
+    <string name="title_activity_imobile_main">ImobileMainActivity</string>
 
 </resources>

@@ -7,37 +7,51 @@
         <!-- 初始化操作 -->
         <item>appinit,0,com.alier.com.androidtools.ui.AppInit</item>
         <item>main,0,com.alier.com.androidtools.ui.MainActivity</item>
-        <item>map,0,com.alier.com.androidtools.ui.map.BaseMap</item>
-        <item>mapbrower,0,com.alier.com.androidtools.ui.map.MapBrowerActivity</item>
         <item>mainlayout,0,com.alier.com.androidtools.ui.uitest.MainLayout</item>
         <item>dbtest,0,com.alier.com.androidtools.ui.db_Test.DB_Test</item>
-        <item>addcallout,0,com.alier.com.androidtools.ui.map.AddCallout</item>
         <item>robotium,0,com.alier.com.androidtools.ui.robotium_Test.RobotiumTestActivity</item>
-    	<item>progressdialog,0,com.alier.com.androidtools.ui.layout.ProgressDialogActivity</item>
-    	<item>navigation,0,com.alier.com.androidtools.ui.imobile.navigation.Navigation</item>
-  		<item>transportation,0,com.alier.com.androidtools.ui.imobile.netAnalyst.FindPath</item>
-    	<item>gif,0,com.alier.com.androidtools.ui.layout.GifShow</item>
-    	<item>dataservice,0,com.alier.com.androidtools.ui.imobile.dataservice.DataService</item>
-    	<item>dataserviceshow,0,com.alier.com.androidtools.ui.imobile.dataservice.DataServiceShow</item>
-    	<item>queryservice,0,com.alier.com.androidtools.ui.imobile.queryService.QueryServiceActivity</item>
-    	<item>maponline,0,com.alier.com.androidtools.ui.webView.SuperMapOnLine</item>
+        <!--activity和fragment测试-->
+        <!--service测试-->
+        <!--broadcast receiver测试-->
+        <!--ContentProvider测试-->
+        <!--UI测试-->
+        <item>progressdialog,0,com.alier.com.androidtools.ui.layout.ProgressDialogActivity</item>
+        <item>gif,0,com.alier.com.androidtools.ui.layout.GifShow</item>
         <item>treeview,0,com.alier.com.androidtools.ui.view_test.treelist.TreeView</item>
+        <!--imobile测试-->
+        <item>imobileMain,0,com.alier.com.androidtools.ui.imobile.ImobileMainActivity</item>
+        <item>map,0,com.alier.com.androidtools.ui.map.BaseMap</item>
+        <item>mapbrower,0,com.alier.com.androidtools.ui.map.MapBrowerActivity</item>
+        <item>addcallout,0,com.alier.com.androidtools.ui.map.AddCallout</item>
+        <item>navigation,0,com.alier.com.androidtools.ui.imobile.navigation.Navigation</item>
+        <item>transportation,0,com.alier.com.androidtools.ui.imobile.netAnalyst.FindPath</item>
+        <item>dataservice,0,com.alier.com.androidtools.ui.imobile.dataservice.DataService</item>
+        <item>dataserviceshow,0,com.alier.com.androidtools.ui.imobile.dataservice.DataServiceShow</item>
+        <item>queryservice,0,com.alier.com.androidtools.ui.imobile.queryService.QueryServiceActivity</item>
+        <item>maponline,0,com.alier.com.androidtools.ui.webView.SuperMapOnLine</item>
+        <!--百度地图测试-->
+        <!---->
+
     </string-array>
+
     <string-array name="modules">
         <!-- 模块名称,模块显示的名字,pkId,排序,是否默认显示(0:默认显示,1:默认不显示),模块显示引用的资源图片, -->
-        <item>mapbrower,地图浏览,1,1,0,icon_map</item>
+        <item>imobileMain,Imobile Test,1,1,0,icon_map</item>
         <item>mainlayout,UI测试,2,2,0,icon_ui</item>
         <item>dbtest,数据库测试,3,3,0,icon_sqlite</item>
-        <item>addcallout,地图标注,4,4,0,icon_map_addcallout</item>
         <item>robotium,自动测试,5,5,0,icon_robotium_test</item>
-        <item>navigation,路径导航,6,6,0,icon_route</item>
-        <item>transportation,路径分析,7,7,0,icon_transportation</item>
         <item>gif,GIF显示,8,8,0,icon_gif</item>
         <item>treeview,TreeView,9,9,0,family_tree</item>
+    </string-array>
+    <!--imobile模块所有子模块-->
+    <string-array name="ImobileModeles">
+        <item>map,地图浏览,1,1,0,icon_map</item>
+        <item>addcallout,地图标注,4,4,0,icon_map_addcallout</item>
+        <item>navigation,路径导航,6,6,0,icon_route</item>
+        <item>transportation,路径分析,7,7,0,icon_transportation</item>
         <item>dataservice,服务对接,10,10,0,icon_data_service_64</item>
         <item>dataserviceshow,地图服务,11,11,0,icon_service_map</item>
         <item>queryservice,数据查询,12,12,0,icon_queryservice</item>
         <item>maponline,在线地图,13,13,0,icon_map_online</item>
     </string-array>
-
 </resources>

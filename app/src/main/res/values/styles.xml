@@ -28,6 +28,7 @@
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:dialogTheme">@style/TitledDialog</item>
     </style>
+
     <style name="TitledDialog" parent="@style/Theme.AppCompat.Light.Dialog">
         <item name="android:windowNoTitle">false</item>
     </style>

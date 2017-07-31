@@ -3,6 +3,7 @@ package com.alier.com.androidtools.ui.uitest;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -27,7 +28,6 @@ public class MainLayout extends SlidingFragmentActivity implements OnClickListen
 	private ImageView topButton;// 顶部按钮
 	private Fragment mFragment;
 	private TextView topTextView;// 顶部标题
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -37,7 +37,12 @@ public class MainLayout extends SlidingFragmentActivity implements OnClickListen
 		initView();
 	}
 
+	/**
+	 * 初始化侧边栏
+	 * @param savedInstanceState
+     */
 	private void initSlidingMenu(Bundle savedInstanceState) {
+        // 如果保存的状态不为空则得到之前保存的Fragment，否则实例化mFragment
 		if (savedInstanceState != null) {
 			mFragment = getSupportFragmentManager().getFragment(savedInstanceState, "mFragment");
 		}
@@ -47,7 +52,6 @@ public class MainLayout extends SlidingFragmentActivity implements OnClickListen
 		// 设置左侧菜单栏
 		setBehindContentView(R.layout.uitest_menu_frame_left);
 		getSupportFragmentManager().beginTransaction().replace(R.id.menu_frame, new LeftFragmentMenu()).commit();
-
 		// 实例化滑动菜单对象
 		SlidingMenu sm = getSlidingMenu();
 		// 设置可以左右滑动的菜单
@@ -102,5 +106,4 @@ public class MainLayout extends SlidingFragmentActivity implements OnClickListen
 			toggle();
 		}
 	}
-
 }

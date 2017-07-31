@@ -12,6 +12,7 @@ import android.widget.ListView;
 
 import com.alier.com.androidtools.R;
 import com.alier.com.androidtools.adapter.SlidingMenuAdapter;
+import com.alier.com.androidtools.ui.uitest.MainLayout;
 
 /**
  * 侧边栏菜单
@@ -23,7 +24,7 @@ import com.alier.com.androidtools.adapter.SlidingMenuAdapter;
 public class LeftFragmentMenu extends Fragment {
 
 	private ListView lvMenu;// 侧边栏菜单列表
-
+	private String[] slidingMenu;//菜单栏填充内容
 	@Override
 	public void onAttach(Context context) {
 		super.onAttach(context);
@@ -42,9 +43,9 @@ public class LeftFragmentMenu extends Fragment {
 	}
 
 	private void initViews(View view) {
-		String[] slidingMenu = getResources().getStringArray(R.array.libraries);
+		slidingMenu = getResources().getStringArray(R.array.libraries);
 		lvMenu = (ListView) view.findViewById(R.id.slidingmuneLv);
-		lvMenu.setAdapter(new SlidingMenuAdapter());
+		lvMenu.setAdapter(new SlidingMenuAdapter(getContext(),slidingMenu));
 		lvMenu.setOnItemClickListener(lvMenuItemOnclick);
 	}
 
@@ -52,10 +53,26 @@ public class LeftFragmentMenu extends Fragment {
 	 * 单机菜单栏的一项的操作
 	 */
 	OnItemClickListener lvMenuItemOnclick = new OnItemClickListener() {
-
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-			
+			String[] item = slidingMenu[position].split(",");
+			String target = item[1];
+            Fragment targetFragment = null;
+            String title = "";
+            if(target.equals("userdefined")){
+                targetFragment = new CustomViewFragment();
+            }
+            switchFragment(targetFragment,title);
 		}
 	};
+
+    private void switchFragment(Fragment fragment,String title){
+        if(null == getActivity()){
+            return;
+        }
+        if(getActivity() instanceof MainLayout){
+            MainLayout ml = (MainLayout) getActivity();
+            ml.switchFragment(fragment,title);
+        }
+    }
 }

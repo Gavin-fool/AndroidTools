@@ -205,7 +205,6 @@ public class AppInit extends BaseActivity {
             } else {
                 T.showShort(this, "请先验证密码");
             }
-
         }
     }
 
