@@ -2,19 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
-    <com.gavin.androidtesttools.ui.customView.MyGifView
+    <com.alier.com.androidtools.ui.customView.MyGifView
         android:id="@+id/iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/start"
-        android:layout_margin="20dp" />
+        android:layout_margin="20dp"
+        android:background="@drawable/start" />
 
-     <TextView 
-       android:text="====Gif图片测试布局===="
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-       android:layout_width="wrap_content"
-       /> 
+        android:text="====Gif图片测试布局====" />
 
 </LinearLayout>

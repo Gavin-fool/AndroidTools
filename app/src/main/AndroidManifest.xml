@@ -107,8 +107,7 @@
         <activity
             android:name=".ui.MainActivity"
             android:launchMode="singleInstance"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.map.MapBrowerActivity"
             android:screenOrientation="portrait" />
@@ -123,6 +122,11 @@
         <!-- 数据库测试 -->
         <activity
             android:name=".ui.db_Test.DB_Test"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize" />
+        <!--robotium测试-->
+        <activity
+            android:name=".ui.robotium_Test.RobotiumTestActivity"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustResize" />
         <!-- iMobile导航功能 -->
@@ -169,16 +173,13 @@
         <activity android:name=".libresource.slidingmenu.app.SlidingActivity" />
         <activity
             android:name=".ui.activityTest.FirstActivity"
-            android:label="@string/title_activity_first"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_first"/>
         <activity
-            android:name=".ui.view_test.treelist.TreeView"
-            android:theme="@style/AppTheme"
+            android:name=".ui.uitest.treelist.TreeView"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ui.imobile.ImobileMainActivity"
-            android:label="@string/title_activity_imobile_main"
-            android:theme="@style/AppTheme"></activity>
+            android:label="@string/title_activity_imobile_main"></activity>
         <!--MPAndroidChart系列activity-->
         <activity android:name=".ui.MPChart.notimportant.MPMainActivity" android:theme="@style/AppTheme"></activity>
         <activity android:name=".ui.MPChart.LineChartActivity1"></activity> <!--  android:configChanges="keyboardHidden|orientation|screenSize"  -->
@@ -226,6 +227,8 @@
 
         <!--VHTable-->
         <activity android:name=".ui.uitest.VHTable.VHTableActivity"></activity>
+        <!--ProgressDialogActivity-->
+        <activity android:name=".ui.uitest.ProgressDialogActivity"></activity>
     </application>
 
 </manifest>

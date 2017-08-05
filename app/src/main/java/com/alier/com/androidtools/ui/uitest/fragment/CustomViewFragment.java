@@ -14,7 +14,10 @@ import android.widget.ListView;
 import com.alier.com.androidtools.R;
 import com.alier.com.androidtools.ui.MPChart.notimportant.ContentItem;
 import com.alier.com.androidtools.ui.MPChart.notimportant.MyAdapter;
+import com.alier.com.androidtools.ui.uitest.GifShow;
+import com.alier.com.androidtools.ui.uitest.ProgressDialogActivity;
 import com.alier.com.androidtools.ui.uitest.VHTable.VHTableActivity;
+import com.alier.com.androidtools.ui.uitest.treelist.TreeView;
 
 import java.util.ArrayList;
 
@@ -60,6 +63,9 @@ public class CustomViewFragment extends Fragment implements AdapterView.OnItemCl
     private void initViews(View view) {
         ArrayList<ContentItem> objects = new ArrayList<ContentItem>();
         objects.add(new ContentItem("1.VHTable", "可左右、上下滑动的表格"));
+        objects.add(new ContentItem("2.TreeView","可无限级拓展的树形控件"));
+        objects.add(new ContentItem("3.GIFView","GIF图片显示"));
+        objects.add(new ContentItem("4.ProgressDialog","对话框式进度条"));
         MyAdapter adapter = new MyAdapter(getContext(), objects);
         ListView lv = (ListView)view.findViewById(R.id.listView1);
         lv.setAdapter(adapter);
@@ -73,6 +79,21 @@ public class CustomViewFragment extends Fragment implements AdapterView.OnItemCl
             case 0:
                 intent= new Intent();
                 intent.setClass(getContext(), VHTableActivity.class);
+                startActivity(intent);
+                break;
+            case 1:
+                intent = new Intent();
+                intent.setClass(getContext(), TreeView.class);
+                startActivity(intent);
+                break;
+            case 2:
+                intent = new Intent();
+                intent.setClass(getContext(), GifShow.class);
+                startActivity(intent);
+                break;
+            case 3:
+                intent = new Intent();
+                intent.setClass(getContext(), ProgressDialogActivity.class);
                 startActivity(intent);
                 break;
         }

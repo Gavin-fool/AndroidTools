@@ -66,8 +66,6 @@ public class ProgressDialogActivity extends BaseActivity {
 
 		// 进度最大值
 		progressDialog.setMax(MAX_PROGRESS);
-		
-		
 		progressDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "暂停", new DialogInterface.OnClickListener() {
 			
 			@Override
