@@ -40,11 +40,12 @@
         <!-- 模块名称,模块显示的名字,pkId,排序,是否默认显示(0:默认显示,1:默认不显示),模块显示引用的资源图片, -->
         <item>imobileMain,Imobile Test,1,1,0,icon_map</item>
         <item>mainlayout,UI测试,2,2,0,icon_ui</item>
-        <item>dbtest,数据库测试,3,3,0,icon_sqlite</item>
-        <item>robotium,自动测试,4,4,0,icon_robotium_test</item>
+        <item>MPAndrroidChart,MPChart,3,3,0,ic_launcher</item>
+        <item>treeview,TreeView,4,4,0,family_tree</item>
         <item>gif,GIF显示,5,5,0,icon_gif</item>
-        <item>treeview,TreeView,6,6,0,family_tree</item>
-        <item>MPAndrroidChart,MPChart,7,7,0,ic_launcher</item>
+        <item>dbtest,数据库测试,6,6,0,icon_sqlite</item>
+        <item>robotium,自动测试,7,7,0,icon_robotium_test</item>
+
     </string-array>
     <!--imobile模块所有子模块-->
     <string-array name="ImobileModeles">

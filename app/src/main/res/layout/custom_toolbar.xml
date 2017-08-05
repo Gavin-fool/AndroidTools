@@ -9,10 +9,10 @@
     android:elevation="4dp"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
     app:theme="@style/AppTheme.Toolbar">
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="主界面"/>
+    <!--<TextView-->
+        <!--android:id="@+id/tv_title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center"-->
+        <!--android:text="主界面"/>-->
 </android.support.v7.widget.Toolbar >

@@ -24,7 +24,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 
 	private GridView gvMainMenu = null;
 	private GridViewMenuAdapter gvMenuAdapter = null;
-	private RadioButton rb_exit_app = null;
+//	private RadioButton rb_exit_app = null;
 	private Toolbar toolbar = null;
 	@Override
 	public void init() {
@@ -42,10 +42,9 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 	private void initView() {
 		gvMainMenu = (GridView) findViewById(R.id.gvMainMenu);
 		gvMainMenu.setPadding(5, 40, 5, 5);
-		rb_exit_app = (RadioButton) findViewById(R.id.exit_app);
-		rb_exit_app.setOnClickListener(this);
+//		rb_exit_app = (RadioButton) findViewById(R.id.exit_app);
+//		rb_exit_app.setOnClickListener(this);
         toolbar = (Toolbar)this.findViewById(R.id.toolbar);
-        toolbar.setNavigationIcon(R.drawable.back);
         setTitle("主界面");
         setSupportActionBar(toolbar);
 	}
@@ -74,9 +73,9 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.exit_app:
-			this.finish();
-			break;
+//		case R.id.exit_app:
+//			this.finish();
+//			break;
 		default:
 			break;
 		}

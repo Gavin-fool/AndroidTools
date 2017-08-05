@@ -179,6 +179,7 @@
             android:name=".ui.imobile.ImobileMainActivity"
             android:label="@string/title_activity_imobile_main"
             android:theme="@style/AppTheme"></activity>
+        <!--MPAndroidChart系列activity-->
         <activity android:name=".ui.MPChart.notimportant.MPMainActivity" android:theme="@style/AppTheme"></activity>
         <activity android:name=".ui.MPChart.LineChartActivity1"></activity> <!--  android:configChanges="keyboardHidden|orientation|screenSize"  -->
         <activity android:name=".ui.MPChart.LineChartActivity2"></activity>
@@ -222,6 +223,9 @@
         <activity android:name=".ui.MPChart.BarChartPositiveNegative"></activity>
         <activity android:name=".ui.MPChart.FilledLineActivity"></activity>
         <activity android:name=".ui.MPChart.HalfPieChartActivity"></activity>
+
+        <!--VHTable-->
+        <activity android:name=".ui.uitest.VHTable.VHTableActivity"></activity>
     </application>
 
 </manifest>

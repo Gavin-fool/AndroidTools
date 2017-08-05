@@ -33,8 +33,8 @@ public class MainLayout extends SlidingFragmentActivity implements OnClickListen
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.uitest_main_layout);
+        initView();
 		initSlidingMenu(savedInstanceState);
-		initView();
 	}
 
 	/**
@@ -68,6 +68,7 @@ public class MainLayout extends SlidingFragmentActivity implements OnClickListen
 		sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
 		// 设置下方视图的在滚动时的缩放比例
 		sm.setBehindScrollScale(0.0f);
+        switchFragment(mFragment,"自定义View汇总");
 	}
 
 	@Override

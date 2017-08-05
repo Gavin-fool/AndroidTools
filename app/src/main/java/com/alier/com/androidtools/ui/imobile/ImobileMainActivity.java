@@ -1,8 +1,10 @@
 package com.alier.com.androidtools.ui.imobile;
 
+import android.support.design.widget.NavigationView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.alier.com.androidtools.R;
 import com.alier.com.androidtools.adapter.ImobileRecyclerViewAdapter;
@@ -35,6 +37,14 @@ public class ImobileMainActivity extends BaseActivity {
      */
     private void initView() {
         toolbar = (Toolbar) this.findViewById(R.id.toolbar);
+        toolbar.setNavigationIcon(R.drawable.back);
+        toolbar.setTitle("Imobile测试");
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ImobileMainActivity.this.finish();
+            }
+        });
         recyclerView = (RecyclerView) this.findViewById(R.id.recyclerView);
     }
 

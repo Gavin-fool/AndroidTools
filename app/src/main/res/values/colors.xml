@@ -10,4 +10,6 @@
     <color name="lockview_background">#2B2B2B</color>
     <color name="Transparent">#00000000</color>
     <color name="red">#FFFF0000</color>
+    <color name="darkgreen">#008F7D</color>
+    <color name="blue">#18b4ed</color><!-- 蓝色 -->
 </resources>

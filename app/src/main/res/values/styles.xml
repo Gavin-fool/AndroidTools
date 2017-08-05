@@ -61,8 +61,6 @@
         <item name="android:textColor">@android:color/transparent</item>
     </style>
 
-    <string name="movie_details">Movie Details</string>
-
     <style name="main_rb">
         <item name="android:button">@null</item>
         <item name="android:background">@android:color/transparent</item>
