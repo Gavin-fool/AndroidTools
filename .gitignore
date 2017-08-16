@@ -18,6 +18,3 @@ project.properties
 res/
 src/
 /gradle/
-/app/
-MPChartExample/
-MPChartLib/
