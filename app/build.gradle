@@ -2,7 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    buildToolsVersion '24.0.2'
+    useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "com.alier.com.androidtools"
         minSdkVersion 21
@@ -30,6 +31,8 @@ android {
             universalApk true
         }
     }
+    productFlavors {
+    }
 }
 
 repositories {
@@ -49,11 +52,11 @@ dependencies {
     compile files('D:/MyCodeForAS/AndroidTools/imobilelibs/libs/com.supermap.services_v810.jar')
     compile files('D:/MyCodeForAS/AndroidTools/imobilelibs/libs/com.supermap.analyst_v810.jar')
     compile files('D:/MyCodeForAS/AndroidTools/imobilelibs/libs/com.supermap.navigation_v810.jar')
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.android.support:design:24.2.1'
-    compile 'com.android.support:recyclerview-v7:24.2.1'
+//    compile 'com.android.support:appcompat-v7:24.1.0'
+    compile 'com.android.support:design:24.1.0'
+    compile 'com.android.support:recyclerview-v7:24.1.0'
     compile 'com.github.PhilJay:MPAndroidChart-Realm:v2.0.2@aar'
-    testCompile 'junit:junit:4.12'
+
     compile project(path: ':controllerlibs')
     compile project(path: ':commons')
     compile project(':MPChartLib')

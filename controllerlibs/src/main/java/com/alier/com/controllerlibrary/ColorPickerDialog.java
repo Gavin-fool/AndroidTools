@@ -36,7 +36,6 @@ public class ColorPickerDialog extends Dialog {
 
     private OnColorChangedListener mListener;
     private int mInitialColor;
-
     private static class ColorPickerView extends View {
         private Paint mPaint;
         private Paint mCenterPaint;

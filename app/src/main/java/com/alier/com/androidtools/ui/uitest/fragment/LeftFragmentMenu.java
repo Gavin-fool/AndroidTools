@@ -63,7 +63,9 @@ public class LeftFragmentMenu extends Fragment {
             String title = item[0];
             if (target.equals("userdefined")) {
                 targetFragment = new CustomViewFragment();
-            } else if (target.equals("listview")) {
+            } else if(target.equals("viewTest")){
+                targetFragment = new ViewTestFragment();
+            }else if (target.equals("listview")) {
                 targetFragment = new CustomListViewFragment();
             } else if (target.equals("menu")) {
                 targetFragment = new CustomMenuFragment();
