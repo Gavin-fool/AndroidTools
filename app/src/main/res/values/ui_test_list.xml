@@ -2,35 +2,12 @@
 <resources>
 
     <string-array name="libraries">
-
         <!-- 控件分类，显示在滑动布局列表中。 参数解释： 字段1：标题； 字段2：对应fragment； -->
         <item>自定义view汇总,userdefined</item>
-        <Item>View测试,viewTest</Item>
+        <item>View测试,viewTest</item>
         <item>ListView汇总,listview</item>
         <item>菜单汇总,menu</item>
         <item>图表汇总,chart</item>
         <item>动画效果汇总,animation</item>
     </string-array>
-    
-    <!-- 参数解释：  字段1：UI显示名称 ；   字段 2：简介；    字段3：时间 ；    字段4：跳转目标 -->
-    <string-array name="userdefined">
-        <item>HorizontalList,横向列表可以横向滑动,2016.11.04,horizontalList</item>
-    </string-array>
-    
-    <string-array name="listview">
-        <item></item>
-    </string-array>
-    
-    <string-array name="menu">
-        <item></item>
-    </string-array>
-    
-    <string-array name="chart">
-        <item></item>
-    </string-array>
-    
-    <string-array name="animation">
-        <item></item>
-    </string-array>
-    
 </resources>
