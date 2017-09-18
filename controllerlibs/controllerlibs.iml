@@ -126,12 +126,10 @@
     <orderEntry type="library" exported="" name="easypermissions-0.4.0" level="project" />
     <orderEntry type="library" exported="" name="commons-io-2.4" level="project" />
     <orderEntry type="library" exported="" name="com.supermap.services_v810" level="project" />
-    <orderEntry type="library" exported="" name="haha-2.0.3" level="project" />
     <orderEntry type="library" exported="" name="com.supermap.mapping_v810" level="project" />
     <orderEntry type="library" exported="" name="com.springsource.org.dom4j-1.6.1" level="project" />
     <orderEntry type="library" exported="" name="support-core-ui-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="com.supermap.navigation_v810" level="project" />
-    <orderEntry type="library" exported="" name="leakcanary-analyzer-1.5.1" level="project" />
     <orderEntry type="library" exported="" name="client-mqttv-3.0" level="project" />
     <orderEntry type="library" exported="" name="com.supermap.analyst_v810" level="project" />
     <orderEntry type="library" exported="" name="support-core-utils-25.3.1" level="project" />
@@ -139,7 +137,6 @@
     <orderEntry type="library" exported="" name="design-24.2.1" level="project" />
     <orderEntry type="library" exported="" name="recyclerview-v7-24.2.1" level="project" />
     <orderEntry type="library" exported="" name="com.supermap.data_v810" level="project" />
-    <orderEntry type="library" exported="" name="leakcanary-android-1.5.1" level="project" />
     <orderEntry type="library" exported="" name="support-v4-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="support-media-compat-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="j4lChartAndroid-1.0.0" level="project" />
@@ -148,6 +145,5 @@
     <orderEntry type="library" exported="" name="support-vector-drawable-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="support-compat-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="animated-vector-drawable-25.3.1" level="project" />
-    <orderEntry type="library" exported="" name="leakcanary-watcher-1.5.1" level="project" />
   </component>
 </module>

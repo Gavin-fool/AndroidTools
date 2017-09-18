@@ -84,7 +84,7 @@
     <uses-permission android:name="android.permission.READ_LOGS" />
 
     <application
-        android:name="com.alier.com.commons.GFApplication"
+        android:name=".GFApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:icon="@drawable/app_icon"

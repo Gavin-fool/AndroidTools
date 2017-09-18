@@ -51,4 +51,7 @@ dependencies {
     compile 'com.github.PhilJay:MPAndroidChart-Realm:v2.0.2@aar'
     compile project(path: ':controllerlibs')
     compile project(':MPChartLib')
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
 }
