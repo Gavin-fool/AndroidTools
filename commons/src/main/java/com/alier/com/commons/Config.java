@@ -28,4 +28,8 @@ public class Config {
      * 数据库文件位置
      */
     public static final String ANDROID_TEST_DBPATH = ANDROID_TEST_PATH + "/FGdataBase.db";
+    /**
+     * 多媒体存储位置
+     */
+    public static final String MEDIA_PATH = ANDROID_TEST_PATH + "/media";
 }

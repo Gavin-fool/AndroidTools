@@ -31,6 +31,8 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    //动态权限申请包
+    compile 'pub.devrel:easypermissions:0.4.0'
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:design:24.2.1'
     compile 'com.android.support:recyclerview-v7:24.2.1'
@@ -38,4 +40,11 @@ dependencies {
     compile files('libs/client-mqttv-3.0.jar')
     compile files('libs/j4lChartAndroid-1.0.0.jar')
     compile files('libs/com.springsource.org.dom4j-1.6.1.jar')
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    compile files('libs/com.supermap.analyst_v810.jar')
+    compile files('libs/com.supermap.data_v810.jar')
+    compile files('libs/com.supermap.mapping_v810.jar')
+    compile files('libs/com.supermap.navigation_v810.jar')
+    compile files('libs/com.supermap.services_v810.jar')
 }

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 播放|暂停 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false"
+        android:drawable="@drawable/m_play" />
+        <!--已经选中-->
+    <item android:state_checked="true"
+        android:drawable="@drawable/m_pause" />
+</selector>

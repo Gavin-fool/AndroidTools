@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 录音界面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_alert_box"
+    android:orientation="vertical"
+    android:padding="5dip">
+
+    <!-- 主界面，用来显示当前录音状态 -->
+
+    <FrameLayout
+        android:id="@+id/record_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="10dip">
+
+        <!-- 录音界面底图 -->
+
+        <ImageView
+            android:id="@+id/microphone_static"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription=""
+            android:src="@drawable/s0"
+            android:visibility="gone" />
+        <!-- 圆形进度条，显示录音动态效果 -->
+
+        <ProgressBar
+            android:id="@+id/microphoneing"
+            android:layout_width="180dip"
+            android:layout_height="180dip"
+            android:layout_gravity="center"
+            android:indeterminateDrawable="@layout/speaking" />
+        <!-- 录音界面状态 -->
+
+        <TextView
+            android:id="@+id/media_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="10dip"
+            android:text="准备就绪"
+            android:textColor="@color/white" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/record_frame"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- 录音|停止 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <CheckBox
+                android:id="@+id/ck_record"
+                android:layout_width="36dip"
+                android:layout_height="36dip"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_ck_audio"
+                android:button="@null" />
+
+            <TextView
+                android:id="@+id/ck_record_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ck_record"
+                android:layout_centerHorizontal="true"
+                android:text="录制"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+        <!-- 确认 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_record_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/record_ok"
+                android:layout_width="36dip"
+                android:layout_height="36dip"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/m_submit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/record_ok"
+                android:layout_centerHorizontal="true"
+                android:text="确定"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <!-- 播放|暂停 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_ck_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:gravity="center_horizontal">
+
+            <CheckBox
+                android:id="@+id/ck_play"
+                android:layout_width="36dip"
+                android:layout_height="36dip"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_ck_audio_play"
+                android:button="@null"
+                android:enabled="true" />
+
+            <TextView
+                android:id="@+id/ck_play_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ck_play"
+                android:layout_centerHorizontal="true"
+                android:text="播放"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <!-- 取消 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_record_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/record_cancel"
+                android:layout_width="36dip"
+                android:layout_height="36dip"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/m_cancel" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/record_cancel"
+                android:layout_centerHorizontal="true"
+                android:text="取消"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

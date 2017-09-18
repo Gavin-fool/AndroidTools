@@ -11,6 +11,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true// Enabling multidex support.
     }
     buildTypes {
         release {
@@ -47,17 +48,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile files('D:/MyCodeForAS/AndroidTools/imobilelibs/libs/com.supermap.mapping_v810.jar')
-    compile files('D:/MyCodeForAS/AndroidTools/imobilelibs/libs/com.supermap.data_v810.jar')
-    compile files('D:/MyCodeForAS/AndroidTools/imobilelibs/libs/com.supermap.services_v810.jar')
-    compile files('D:/MyCodeForAS/AndroidTools/imobilelibs/libs/com.supermap.analyst_v810.jar')
-    compile files('D:/MyCodeForAS/AndroidTools/imobilelibs/libs/com.supermap.navigation_v810.jar')
-//    compile 'com.android.support:appcompat-v7:24.1.0'
-    compile 'com.android.support:design:24.1.0'
-    compile 'com.android.support:recyclerview-v7:24.1.0'
     compile 'com.github.PhilJay:MPAndroidChart-Realm:v2.0.2@aar'
-
     compile project(path: ':controllerlibs')
-    compile project(path: ':commons')
     compile project(':MPChartLib')
 }

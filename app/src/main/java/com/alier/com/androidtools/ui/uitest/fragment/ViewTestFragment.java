@@ -14,10 +14,7 @@ import android.widget.ListView;
 import com.alier.com.androidtools.R;
 import com.alier.com.androidtools.ui.MPChart.notimportant.ContentItem;
 import com.alier.com.androidtools.ui.MPChart.notimportant.MyAdapter;
-import com.alier.com.androidtools.ui.uitest.GifShow;
-import com.alier.com.androidtools.ui.uitest.ProgressDialogActivity;
 import com.alier.com.androidtools.ui.uitest.VHTable.VHTableActivity;
-import com.alier.com.androidtools.ui.uitest.treelist.TreeView;
 
 import java.util.ArrayList;
 

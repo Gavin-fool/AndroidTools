@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 多媒体控件自定义属性 -->
+    <declare-styleable name="MediaController">
+        <attr name="isOnlyShow" format="boolean" />
+        <attr name="chooseMediaType" format="enum">
+            <enum name="all" value="1" />
+            <enum name="photo" value="2" />
+            <enum name="video" value="3" />
+            <enum name="audio" value="4" />
+            <enum name="none" value="5" />
+        </attr>
+        <attr name="isTakePhoto" format="boolean" />
+        <attr name="isShootVideo" format="boolean" />
+        <attr name="isShowAudio" format="boolean" />
+        <attr name="addWatermark" format="boolean" />
+        <attr name="maxPhotoNum" format="integer" />
+        <!-- 如果宽度为0则按照weight=1计算 -->
+        <attr name="controlWidth" format="dimension" />
+        <attr name="controlHeight" format="dimension" />
+        <attr name="thumbWidth" format="dimension" />
+        <attr name="thumbHeight" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+</resources>

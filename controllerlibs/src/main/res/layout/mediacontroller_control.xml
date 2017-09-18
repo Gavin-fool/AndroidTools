@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/control_column"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff" >
+
+    <HorizontalScrollView
+        android:id="@+id/hs_media_show"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/ll_media_show_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <LinearLayout
+                android:id="@+id/ll_media_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+            </LinearLayout>
+
+            <com.alier.com.controllerlibrary.custom_small.CircleImageView
+                android:id="@+id/bt_add_media"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:src="@drawable/add_media" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

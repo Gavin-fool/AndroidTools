@@ -3,6 +3,8 @@ package com.alier.com.commons;
 import android.app.Application;
 
 import com.alier.com.commons.utils.CrashHandler;
+import com.squareup.leakcanary.LeakCanary;
+import com.squareup.leakcanary.RefWatcher;
 
 /**
  * 应用程序application，主要用于捕获全局异常
@@ -11,13 +13,25 @@ import com.alier.com.commons.utils.CrashHandler;
  * @date 创建时间：2017/7/18 17:02
  * @email gavin_fool@163.com
  */
-
 public class GFApplication extends Application {
 
+    private static RefWatcher refWatcher;
     @Override
     public void onCreate() {
         super.onCreate();
+        //全局异常捕获
         CrashHandler crashHandler = CrashHandler.getCrashHandler();
         crashHandler.init(getApplicationContext());
+        //内存泄漏分析
+        if (LeakCanary.isInAnalyzerProcess(this)) {
+            // This process is dedicated to LeakCanary for heap analysis.
+            // You should not init your app in this process.
+            return;
+        }
+        refWatcher = LeakCanary.install(this);
+    }
+
+    public static RefWatcher getRefWatcher() {
+        return refWatcher;
     }
 }

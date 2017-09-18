@@ -7,7 +7,6 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/commons/commons.iml" filepath="$PROJECT_DIR$/commons/commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/controllerlibs/controllerlibs.iml" filepath="$PROJECT_DIR$/controllerlibs/controllerlibs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/imobilelibs/imobilelibs.iml" filepath="$PROJECT_DIR$/imobilelibs/imobilelibs.iml" />
     </modules>
   </component>
 </project>

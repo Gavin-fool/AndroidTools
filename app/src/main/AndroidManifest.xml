@@ -147,7 +147,7 @@
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
         <!-- GIF图片显示 -->
         <activity
-            android:name=".ui.uitest.GifShow"
+            android:name=".ui.uitest.customSmallUI.GifShow"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustResize" />
         <!-- 地图服务对接 -->
@@ -228,7 +228,15 @@
         <!--VHTable-->
         <activity android:name=".ui.uitest.VHTable.VHTableActivity"></activity>
         <!--ProgressDialogActivity-->
-        <activity android:name=".ui.uitest.ProgressDialogActivity"></activity>
+        <activity android:name=".ui.uitest.customSmallUI.ProgressDialogActivity"></activity>
+        <!--MediaControllerShow-->
+        <activity android:name=".ui.uitest.customSmallUI.MediaControllerShow"></activity>
+        <activity android:name="com.alier.com.controllerlibrary.ui_photo_album.GalleryActivity"></activity>
+        <activity android:name="com.alier.com.controllerlibrary.ui_photo_album.MediaChooseActivity"></activity>
+        <activity android:name="com.alier.com.controllerlibrary.ui_photo_album.MediaFolderActivity"></activity>
+        <activity android:name="com.alier.com.controllerlibrary.ui_photo_album.ShowAllPhoto"></activity>
+        <activity android:name="com.alier.com.controllerlibrary.mediaController.DynViewPager"></activity>
+        <activity android:name="com.alier.com.controllerlibrary.mediaController.ShootVideo"></activity>
     </application>
 
 </manifest>

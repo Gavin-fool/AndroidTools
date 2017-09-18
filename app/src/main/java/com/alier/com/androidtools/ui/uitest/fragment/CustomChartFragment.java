@@ -25,8 +25,6 @@ import java.util.ArrayList;
  * @date 创建时间：2017/8/5 16:04
  * @email gavin_fool@163.com
  */
-
-
 public class CustomChartFragment extends Fragment implements AdapterView.OnItemClickListener{
     /**
      * fragment与activity的生命周期方法完全一样，fragment完全依赖于activity生存。
@@ -61,7 +59,6 @@ public class CustomChartFragment extends Fragment implements AdapterView.OnItemC
     private void initViews(View view) {
         ArrayList<ContentItem> objects = new ArrayList<ContentItem>();
         objects.add(new ContentItem("1.VHTable", "可左右、上下滑动的表格"));
-
         MyAdapter adapter = new MyAdapter(getContext(), objects);
         ListView lv = (ListView)view.findViewById(R.id.listView1);
         lv.setAdapter(adapter);

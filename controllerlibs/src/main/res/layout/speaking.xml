@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 录音界面动画 -->
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <item android:drawable="@drawable/s1" android:duration="200" />
+    <item android:drawable="@drawable/s2" android:duration="200" />
+    <item android:drawable="@drawable/s8" android:duration="200" />
+    <item android:drawable="@drawable/s4" android:duration="200" />
+    <item android:drawable="@drawable/s5" android:duration="200" />
+    <item android:drawable="@drawable/s10" android:duration="200" />
+    <item android:drawable="@drawable/s9" android:duration="200" />
+    <item android:drawable="@drawable/s7" android:duration="200" />
+    <item android:drawable="@drawable/s6" android:duration="200" />
+    <item android:drawable="@drawable/s3" android:duration="200" />
+</animation-list> 
