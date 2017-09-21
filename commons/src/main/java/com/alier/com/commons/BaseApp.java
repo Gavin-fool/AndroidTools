@@ -6,6 +6,7 @@ import android.content.Context;
 
 import com.alier.com.commons.entity.Menu;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -31,9 +32,9 @@ public class BaseApp {
      */
     public static BaseApp g_baseApp = null;
     /**
-     * 程序中所有的activity，在程序结束时全部finish
+     * 使用软引用，避免activity在销毁时造成的内存泄漏。程序中所有的activity，在程序结束时全部finish
      */
-    private static HashMap<String, Activity> s_activityMap = new HashMap<String, Activity>();
+    private static HashMap<String, WeakReference<Activity>> s_activityMap = new HashMap<String, WeakReference<Activity>>();
     private static ArrayList<Context> mActivities = new ArrayList<Context>();
     private static ArrayList<BroadcastReceiver> mBroadcastReceivers = new ArrayList<BroadcastReceiver>();
     /**
@@ -63,7 +64,7 @@ public class BaseApp {
      * @param activity
      */
     public void addActivity(Activity activity) {
-        s_activityMap.put(activity.getLocalClassName(), activity);
+        s_activityMap.put(activity.getLocalClassName(), new WeakReference<>(activity));
     }
 
     /**
@@ -100,13 +101,14 @@ public class BaseApp {
             }
         }
         Iterator<String> iterator = s_activityMap.keySet().iterator();
-        Activity activity = null;
+        WeakReference<Activity> activity = null;
         while (iterator.hasNext()) {
             activity = s_activityMap.get(iterator.next());
             if (null != activity) {
-                activity.finish();
+                activity.get().finish();
             }
         }
         System.exit(0);//系统退出
+        android.os.Process.killProcess(android.os.Process.myPid());
     }
 }

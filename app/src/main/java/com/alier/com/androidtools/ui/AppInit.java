@@ -10,14 +10,15 @@ import java.util.Iterator;
 
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.alier.com.androidtools.R;
-import com.alier.com.androidtools.ui.map.IM_BaseMap;
-import com.alier.com.commons.BaseActivity;
 import com.alier.com.commons.BaseApp;
 import com.alier.com.commons.Global;
 import com.alier.com.commons.entity.CookieKeyBean;
@@ -35,7 +36,7 @@ import com.alier.com.controllerlibrary.lockview.LockView;
  * @version 1.0
  * @date 创建时间：2016年8月22日 上午11:07:48
  */
-public class AppInit extends BaseActivity {
+public class AppInit extends AppCompatActivity implements OnClickListener{
     private Button btn_begin;
     private Button btnSetPassword;
     private Button btnForgetPassword;
@@ -48,6 +49,12 @@ public class AppInit extends BaseActivity {
         initView();
         BaseApp.mContext = getApplicationContext();
         new Thread(AppInitRunnable).start();// 在子线程中初始化应用数据
+    }
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        init();
     }
 
     private void initView() {
@@ -75,17 +82,17 @@ public class AppInit extends BaseActivity {
                 if (isSetPassword) {
                     cookie.removeVal(CookieKeyBean.APP_PASSWORD);
                     cookie.putVal(CookieKeyBean.APP_PASSWORD, md5Str);
-                    T.showShort(AppInit.this, "设置密码成功");
+                    T.showShort(BaseApp.mContext, "设置密码成功");
                     btnSetPassword.setVisibility(View.VISIBLE);
                     btnForgetPassword.setVisibility(View.VISIBLE);
                     btn_begin.setVisibility(View.VISIBLE);
                     isSetPassword = false;
                 } else { // 比较路径是否一致
                     if (md5Str.equals(password)) {
-                        T.showShort(AppInit.this, "手势密码正确！");
+                        T.showShort(BaseApp.mContext, "手势密码正确！");
                         toTarget();
                     } else {
-                        T.showShort(AppInit.this, "手势密码错误，请重试！");
+                        T.showShort(BaseApp.mContext, "手势密码错误，请重试！");
                     }
                 }
                 return true;
@@ -93,10 +100,6 @@ public class AppInit extends BaseActivity {
         });
     }
 
-    @Override
-    public void exec() {
-
-    }
 
     Runnable AppInitRunnable = new Runnable() {
 
@@ -203,7 +206,7 @@ public class AppInit extends BaseActivity {
                 isLogin = true;
                 toTarget();
             } else {
-                T.showShort(this, "请先验证密码");
+                T.showShort(BaseApp.mContext, "请先验证密码");
             }
         }
     }
