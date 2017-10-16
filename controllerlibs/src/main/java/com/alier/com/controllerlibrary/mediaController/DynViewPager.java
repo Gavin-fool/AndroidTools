@@ -17,13 +17,12 @@ import android.widget.Toast;
 import com.alier.com.commons.BaseActivity;
 import com.alier.com.commons.Config;
 import com.alier.com.commons.entity.ListSerializable;
-import com.alier.com.commons.utils.DBHelper;
 import com.alier.com.commons.utils.DepthPageTransformer;
 import com.alier.com.commons.utils.FileUtils;
 import com.alier.com.commons.utils.ObjectUtils;
 import com.alier.com.commons.utils.T;
 import com.alier.com.controllerlibrary.R;
-import com.alier.com.controllerlibrary.custom_small.ZoomImageView;
+import com.alier.com.controllerlibrary.custom_small.PinchImageView;
 
 public class DynViewPager extends BaseActivity {
 	private ViewPager viewPager;
@@ -89,7 +88,7 @@ public class DynViewPager extends BaseActivity {
 
 		@Override
 		public Object instantiateItem(ViewGroup container, int position) {
-			ZoomImageView imageView = new ZoomImageView(DynViewPager.this);
+			PinchImageView imageView = new PinchImageView(DynViewPager.this);
 			imageView = setImageView(imageView, checkedImgPath.get(position));
 			mImageViews[position] = imageView;
 			container.addView(imageView);
@@ -140,7 +139,7 @@ public class DynViewPager extends BaseActivity {
 	/**
 	 * 设置图片
 	 */
-	private ZoomImageView setImageView(ZoomImageView imageView, String path) {
+	private PinchImageView setImageView(PinchImageView imageView, String path) {
 		if (new File(path).exists()) {
 			imageView.setImageBitmap(FileUtils.generateBitmap(path,1024*512));
 		} else {

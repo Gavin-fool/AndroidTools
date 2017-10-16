@@ -36,6 +36,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:design:24.2.1'
     compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.orhanobut:logger:1.15'
     compile files('libs/commons-io-2.4.jar')
     compile files('libs/client-mqttv-3.0.jar')
     compile files('libs/j4lChartAndroid-1.0.0.jar')

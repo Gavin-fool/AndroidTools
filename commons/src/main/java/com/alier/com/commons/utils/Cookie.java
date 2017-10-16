@@ -22,8 +22,8 @@ public class Cookie {
      * 存贮cookie集合
      */
     private static HashMap<String, Cookie> mHashMapCookie = new HashMap<String, Cookie>();
-    SharedPreferences sp;
-    SharedPreferences.Editor editor;
+    private SharedPreferences sp;
+    private SharedPreferences.Editor editor;
     /**
      * 存储应用程序配置参数
      */

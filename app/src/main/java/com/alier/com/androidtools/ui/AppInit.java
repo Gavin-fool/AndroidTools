@@ -87,6 +87,7 @@ public class AppInit extends AppCompatActivity implements OnClickListener{
                     btnForgetPassword.setVisibility(View.VISIBLE);
                     btn_begin.setVisibility(View.VISIBLE);
                     isSetPassword = false;
+                    password = md5Str;
                 } else { // 比较路径是否一致
                     if (md5Str.equals(password)) {
                         T.showShort(BaseApp.mContext, "手势密码正确！");

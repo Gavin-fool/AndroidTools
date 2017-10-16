@@ -124,7 +124,7 @@
             android:name=".ui.db_Test.DB_Test"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustResize" />
-        <!--robotium测试-->
+        <!-- robotium测试 -->
         <activity
             android:name=".ui.robotium_Test.RobotiumTestActivity"
             android:launchMode="singleTask"
@@ -173,70 +173,73 @@
         <activity android:name=".libresource.slidingmenu.app.SlidingActivity" />
         <activity
             android:name=".ui.activityTest.FirstActivity"
-            android:label="@string/title_activity_first"/>
+            android:label="@string/title_activity_first" />
         <activity
             android:name=".ui.uitest.treelist.TreeView"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ui.imobile.ImobileMainActivity"
-            android:label="@string/title_activity_imobile_main"></activity>
-        <!--MPAndroidChart系列activity-->
-        <activity android:name=".ui.MPChart.notimportant.MPMainActivity" android:theme="@style/AppTheme"></activity>
-        <activity android:name=".ui.MPChart.LineChartActivity1"></activity> <!--  android:configChanges="keyboardHidden|orientation|screenSize"  -->
-        <activity android:name=".ui.MPChart.LineChartActivity2"></activity>
-        <activity android:name=".ui.MPChart.LineChartTime"></activity>
-        <activity android:name=".ui.MPChart.BarChartActivity"></activity>
-        <activity android:name=".ui.MPChart.HorizontalBarChartActivity"></activity>
-        <activity android:name=".ui.MPChart.PieChartActivity"></activity>
-        <activity android:name=".ui.MPChart.PiePolylineChartActivity"></activity>
-        <activity android:name=".ui.MPChart.MultiLineChartActivity"></activity>
-        <activity android:name=".ui.MPChart.BarChartActivityMultiDataset"></activity>
-        <activity android:name=".ui.MPChart.DrawChartActivity"></activity>
-        <activity android:name=".ui.MPChart.ScatterChartActivity"></activity>
-        <activity android:name=".ui.MPChart.BubbleChartActivity"></activity>
-        <activity android:name=".ui.MPChart.fragments.SimpleChartDemo"></activity>
-        <activity android:name=".ui.MPChart.ListViewBarChartActivity"></activity>
-        <activity android:name=".ui.MPChart.ListViewMultiChartActivity"></activity>
-        <activity android:name=".ui.MPChart.StackedBarActivity"></activity>
-        <activity android:name=".ui.MPChart.AnotherBarActivity"></activity>
-        <activity android:name=".ui.MPChart.InvertedLineChartActivity"></activity>
-        <activity android:name=".ui.MPChart.CandleStickChartActivity"></activity>
-        <activity android:name=".ui.MPChart.CubicLineChartActivity"></activity>
-        <activity android:name=".ui.MPChart.RadarChartActivitry"></activity>
-        <activity android:name=".ui.MPChart.LineChartActivityColored"></activity>
-        <activity android:name=".ui.MPChart.DynamicalAddingActivity"></activity>
-        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityLine"></activity>
-        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityBar"></activity>
-        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityHorizontalBar"></activity>
-        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityScatter"></activity>
-        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityCandle"></activity>
-        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityBubble"></activity>
-        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityPie"></activity>
-        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityRadar"></activity>
-        <activity android:name=".ui.MPChart.realm.RealmMainActivity"></activity>
-        <activity android:name=".ui.MPChart.RealtimeLineChartActivity"></activity>
-        <activity android:name=".ui.MPChart.CombinedChartActivity"></activity>
-        <activity android:name=".ui.MPChart.PerformanceLineChart"></activity>
-        <activity android:name=".ui.MPChart.BarChartActivitySinus"></activity>
-        <activity android:name=".ui.MPChart.ScrollViewActivity"></activity>
-        <activity android:name=".ui.MPChart.StackedBarActivityNegative"></activity>
-        <activity android:name=".ui.MPChart.realm.RealmWikiExample"></activity>
-        <activity android:name=".ui.MPChart.BarChartPositiveNegative"></activity>
-        <activity android:name=".ui.MPChart.FilledLineActivity"></activity>
-        <activity android:name=".ui.MPChart.HalfPieChartActivity"></activity>
+            android:label="@string/title_activity_imobile_main" />
+        <!-- MPAndroidChart系列activity -->
+        <activity
+            android:name=".ui.MPChart.notimportant.MPMainActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ui.MPChart.LineChartActivity1" /> <!-- android:configChanges="keyboardHidden|orientation|screenSize" -->
+        <activity android:name=".ui.MPChart.LineChartActivity2" />
+        <activity android:name=".ui.MPChart.LineChartTime" />
+        <activity android:name=".ui.MPChart.BarChartActivity" />
+        <activity android:name=".ui.MPChart.HorizontalBarChartActivity" />
+        <activity android:name=".ui.MPChart.PieChartActivity" />
+        <activity android:name=".ui.MPChart.PiePolylineChartActivity" />
+        <activity android:name=".ui.MPChart.MultiLineChartActivity" />
+        <activity android:name=".ui.MPChart.BarChartActivityMultiDataset" />
+        <activity android:name=".ui.MPChart.DrawChartActivity" />
+        <activity android:name=".ui.MPChart.ScatterChartActivity" />
+        <activity android:name=".ui.MPChart.BubbleChartActivity" />
+        <activity android:name=".ui.MPChart.fragments.SimpleChartDemo" />
+        <activity android:name=".ui.MPChart.ListViewBarChartActivity" />
+        <activity android:name=".ui.MPChart.ListViewMultiChartActivity" />
+        <activity android:name=".ui.MPChart.StackedBarActivity" />
+        <activity android:name=".ui.MPChart.AnotherBarActivity" />
+        <activity android:name=".ui.MPChart.InvertedLineChartActivity" />
+        <activity android:name=".ui.MPChart.CandleStickChartActivity" />
+        <activity android:name=".ui.MPChart.CubicLineChartActivity" />
+        <activity android:name=".ui.MPChart.RadarChartActivitry" />
+        <activity android:name=".ui.MPChart.LineChartActivityColored" />
+        <activity android:name=".ui.MPChart.DynamicalAddingActivity" />
+        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityLine" />
+        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityBar" />
+        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityHorizontalBar" />
+        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityScatter" />
+        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityCandle" />
+        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityBubble" />
+        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityPie" />
+        <activity android:name=".ui.MPChart.realm.RealmDatabaseActivityRadar" />
+        <activity android:name=".ui.MPChart.realm.RealmMainActivity" />
+        <activity android:name=".ui.MPChart.RealtimeLineChartActivity" />
+        <activity android:name=".ui.MPChart.CombinedChartActivity" />
+        <activity android:name=".ui.MPChart.PerformanceLineChart" />
+        <activity android:name=".ui.MPChart.BarChartActivitySinus" />
+        <activity android:name=".ui.MPChart.ScrollViewActivity" />
+        <activity android:name=".ui.MPChart.StackedBarActivityNegative" />
+        <activity android:name=".ui.MPChart.realm.RealmWikiExample" />
+        <activity android:name=".ui.MPChart.BarChartPositiveNegative" />
+        <activity android:name=".ui.MPChart.FilledLineActivity" />
+        <activity android:name=".ui.MPChart.HalfPieChartActivity" />
 
-        <!--VHTable-->
-        <activity android:name=".ui.uitest.VHTable.VHTableActivity"></activity>
-        <!--ProgressDialogActivity-->
-        <activity android:name=".ui.uitest.customSmallUI.ProgressDialogActivity"></activity>
-        <!--MediaControllerShow-->
-        <activity android:name=".ui.uitest.customSmallUI.MediaControllerShow"></activity>
-        <activity android:name="com.alier.com.controllerlibrary.ui_photo_album.GalleryActivity"></activity>
-        <activity android:name="com.alier.com.controllerlibrary.ui_photo_album.MediaChooseActivity"></activity>
-        <activity android:name="com.alier.com.controllerlibrary.ui_photo_album.MediaFolderActivity"></activity>
-        <activity android:name="com.alier.com.controllerlibrary.ui_photo_album.ShowAllPhoto"></activity>
-        <activity android:name="com.alier.com.controllerlibrary.mediaController.DynViewPager"></activity>
-        <activity android:name="com.alier.com.controllerlibrary.mediaController.ShootVideo"></activity>
+        <!-- VHTable -->
+        <activity android:name=".ui.uitest.VHTable.VHTableActivity" />
+        <!-- ProgressDialogActivity -->
+        <activity android:name=".ui.uitest.customSmallUI.ProgressDialogActivity" />
+        <!-- MediaControllerShow -->
+        <activity android:name=".ui.uitest.customSmallUI.MediaControllerShow" />
+        <activity android:name="com.alier.com.controllerlibrary.ui_photo_album.GalleryActivity" />
+        <activity android:name="com.alier.com.controllerlibrary.ui_photo_album.MediaChooseActivity" />
+        <activity android:name="com.alier.com.controllerlibrary.ui_photo_album.MediaFolderActivity" />
+        <activity android:name="com.alier.com.controllerlibrary.ui_photo_album.ShowAllPhoto" />
+        <activity android:name="com.alier.com.controllerlibrary.mediaController.DynViewPager" />
+        <activity android:name="com.alier.com.controllerlibrary.mediaController.ShootVideo" />
+        <activity android:name=".ui.uitest.customSmallUI.CanvasTest"></activity>
     </application>
 
 </manifest>
